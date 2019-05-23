@@ -25,6 +25,9 @@ Project by Marcel Mertens, Anton Ochel, Tizian Groß, Tristan Emig & Benno Grimm
 ## JavaDoc
 <a href="https://mertens-web.ddns.net/JavaDocs" target="_blank">JavaDoc (externer Link)</a>
 
+## JUnit tests
+* We added JUnit tests for all algorithms in the package "test"
+
 ## Developement
 
 ### What we found out
