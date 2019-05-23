@@ -11,7 +11,7 @@ public class OOLinearSearchList {
      * @param search element to be put in list
      * @return list of indexes of matched results
      */
-    static List<Integer> findInt(int[] arr, int search) {
+    public static List<Integer> findInt(int[] arr, int search) {
 
         List<Integer> list = new ArrayList<>();
 
