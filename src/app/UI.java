@@ -73,7 +73,7 @@ public class UI extends JFrame {
         btn_10000.addActionListener(buttonListener);
         btn_cancel.addActionListener(buttonListener);
 
-        Integer allTimes[] = new Integer[30];
+        Integer allTimes[] = new Integer[33];
 
         for (int i = 0; i < allTimes.length; i++) {
             allTimes[i] = -1;
@@ -173,6 +173,7 @@ public class UI extends JFrame {
         JLabel MultithreadedBinarysearch = new JLabel("Multithreaded Quick Sort: ");
         JLabel OOBinarysearch = new JLabel("Object Oriented BinarySearch: ");
         JLabel Quicksort_Binarysearch = new JLabel("Object Oriented Quicksort + Binarysearch");
+        JLabel MultiQuicksort_Binarysearch = new JLabel("Multithreaded Quicksort + Binarysearch");
 
         // Time labels
         // Multithreaded QuickSort
@@ -191,6 +192,10 @@ public class UI extends JFrame {
         JLabel time91 = new JLabel(allTimes[27].toString());
         JLabel time92 = new JLabel(allTimes[28].toString());
         JLabel time93 = new JLabel(allTimes[29].toString());
+        // Multithreaded QuickSort + BinarySearch
+        JLabel time101 = new JLabel(allTimes[30].toString());
+        JLabel time102 = new JLabel(allTimes[31].toString());
+        JLabel time103 = new JLabel(allTimes[32].toString());
 
 
         JLabel name1 = new JLabel("Name");
@@ -218,6 +223,10 @@ public class UI extends JFrame {
         panel_sort.add(time91);
         panel_sort.add(time92);
         panel_sort.add(time93);
+        panel_sort.add(MultiQuicksort_Binarysearch);
+        panel_sort.add(time101);
+        panel_sort.add(time102);
+        panel_sort.add(time103);
 
         // Time label style
         name.setHorizontalAlignment(JLabel.CENTER);
@@ -261,6 +270,9 @@ public class UI extends JFrame {
         time91.setHorizontalAlignment(JLabel.RIGHT);
         time92.setHorizontalAlignment(JLabel.RIGHT);
         time93.setHorizontalAlignment(JLabel.RIGHT);
+        time101.setHorizontalAlignment(JLabel.RIGHT);
+        time102.setHorizontalAlignment(JLabel.RIGHT);
+        time103.setHorizontalAlignment(JLabel.RIGHT);
 
         // Configuration Frame
         this.add(panel_top, BorderLayout.NORTH);
@@ -418,6 +430,7 @@ public class UI extends JFrame {
         JLabel MultithreadedBinarysearch = new JLabel("Multithreaded Quick Sort: ");
         JLabel OOBinarysearch = new JLabel("Object Oriented BinarySearch: ");
         JLabel Quicksort_Binarysearch = new JLabel("Object Oriented Quicksort + Binarysearch");
+        JLabel MultiQuicksort_Binarysearch = new JLabel("Multithreaded Quicksort + Binarysearch");
 
         // Time labels
         // Multithreaded QuickSort
@@ -433,9 +446,13 @@ public class UI extends JFrame {
         JLabel time82 = new JLabel(allTimes[25].toString());
         JLabel time83 = new JLabel(allTimes[26].toString());
         // Object Oriented QuickSort + BinarySearch
-//        JLabel time91 = new JLabel(allTimes[27].toString());
-//        JLabel time92 = new JLabel(allTimes[28].toString());
-//        JLabel time93 = new JLabel(allTimes[29].toString());
+        JLabel time91 = new JLabel(allTimes[27].toString());
+        JLabel time92 = new JLabel(allTimes[28].toString());
+        JLabel time93 = new JLabel(allTimes[29].toString());
+        // Multithreaded QuickSort + BinarySearch
+        JLabel time101 = new JLabel(allTimes[30].toString());
+        JLabel time102 = new JLabel(allTimes[31].toString());
+        JLabel time103 = new JLabel(allTimes[32].toString());
 
         JLabel name1 = new JLabel("Name");
         JLabel min1 = new JLabel("Min Time");
@@ -459,9 +476,13 @@ public class UI extends JFrame {
         panel_sort.add(time82);
         panel_sort.add(time83);
         panel_sort.add(Quicksort_Binarysearch);
-//        panel_sort.add(time91);
-//        panel_sort.add(time92);
-//        panel_sort.add(time93);
+        panel_sort.add(time91);
+        panel_sort.add(time92);
+        panel_sort.add(time93);
+        panel_sort.add(MultiQuicksort_Binarysearch);
+        panel_sort.add(time101);
+        panel_sort.add(time102);
+        panel_sort.add(time103);
 
         // Time label style
         name.setHorizontalAlignment(JLabel.CENTER);
@@ -502,9 +523,12 @@ public class UI extends JFrame {
         time81.setHorizontalAlignment(JLabel.RIGHT);
         time82.setHorizontalAlignment(JLabel.RIGHT);
         time83.setHorizontalAlignment(JLabel.RIGHT);
-//        time91.setHorizontalAlignment(JLabel.RIGHT);
-//        time92.setHorizontalAlignment(JLabel.RIGHT);
-//        time93.setHorizontalAlignment(JLabel.RIGHT);
+        time91.setHorizontalAlignment(JLabel.RIGHT);
+        time92.setHorizontalAlignment(JLabel.RIGHT);
+        time93.setHorizontalAlignment(JLabel.RIGHT);
+        time101.setHorizontalAlignment(JLabel.RIGHT);
+        time102.setHorizontalAlignment(JLabel.RIGHT);
+        time103.setHorizontalAlignment(JLabel.RIGHT);
 
         // Configuration Frame
         this.add(panel_top, BorderLayout.NORTH);

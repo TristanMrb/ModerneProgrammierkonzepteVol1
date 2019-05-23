@@ -4,15 +4,17 @@ Project by Marcel Mertens, Anton Ochel, Tizian Groß, Tristan Emig & Benno Grimm
 ## General Idea
 * Create a program that sorts a given array using quicksort and then searches for a given element using binary search. 
 * Compare that to a program that searches the array in a linear matter.
-* Find out for which of those programs is more useful for different search operations.
+* Find out which of those programs is more useful for different search operations.
 
 ## Concept
 * A UI displays all the test results of the different algorithms
 * 4 search algorithms and 2 sort & search algorithms can be compared
   * each of the algorithms returns a minimum time, a maximum time and an average time
 * every algorithm is tested
-  * the test consist of a 10000 element array where one random specific number has to be found
-    * it is repeated 100 times to get the test results
+  * there are 4 options to test the algorithms
+    * with either 10, 100, 1000 or 10000 elements in the array
+      	* every time, the algorithm is tested 100 (for 10 & 100), 10 (for 1000) or 5 (for 10000) times, depending on the array size
+   
     
 ## Structure
 * Every category has its own package
@@ -29,8 +31,8 @@ Project by Marcel Mertens, Anton Ochel, Tizian Groß, Tristan Emig & Benno Grimm
 
 ### Problems and fixes
 * In an earlier version, the first results were higher than the results after restarting the tests (while the application is still open)
-  * This was due to the cache memory and page tables that adjust over time to the running processes
-    * This was fixed by running through the test 6 times before showing the first test results -> this results in a longer loading time at first
+  * This was porbably due to the cache memory and page tables that adjust over time to the running processes
+    * This was fixed by running through the test 6 times before showing the first test results -> this resulted in a longer loading time at first
 * In an earlier version, the times did not match the calculated mathematic times
   * After seperating the algorithms and giving them their own test function, the problem was resolved
   
