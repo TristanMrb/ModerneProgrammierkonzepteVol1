@@ -4,6 +4,7 @@ package tests;
         import functional.linearsearch.list.FunctionalLinearSearchList;
         import multithreaded.linearsearch.list.LinearSearcherThread;
         import multithreaded.linearsearch.list.MultithreadedListLinearSearch;
+        import multithreaded.quicksort.QuicksortMultithreaded;
         import oo.binarysearch.OOBinarySearch;
         import oo.linearsearch.index.OOLinearSearchIndex;
         import oo.linearsearch.list.OOLinearSearchList;
@@ -26,6 +27,7 @@ public class JUnitTests {
     OOLinearSearchList oolinearlist;
     OOQuickSort ooquicky;
     OOBinarySearch oobinary;
+    QuicksortMultithreaded quicksortMultithreaded;
 
 
     @Before
@@ -35,6 +37,7 @@ public class JUnitTests {
         oolinearlist = new OOLinearSearchList();
         ooquicky = new OOQuickSort();
         oobinary = new OOBinarySearch(arr1);
+        quicksortMultithreaded = new QuicksortMultithreaded();
     }
 
     @Test
@@ -124,6 +127,20 @@ public class JUnitTests {
     {
         Assert.assertEquals(oobinary.searchNumber(69), 5);
         Assert.assertEquals(oobinary.searchNumber(89), -1);
+    }
+    @Test
+    public void QuicksortMultithreadedCheck ()
+    {
+        int[] larr = new int[arr.length];
+
+        for (int i = 0; i < arr.length; i++)
+        {
+            larr[i] = arr[i];
+        }
+
+        quicksortMultithreaded.quickSort(larr,4);
+        Assert.assertEquals(Arrays.equals(larr, arr1), true);
+        Assert.assertEquals(Arrays.equals(larr, arr2), false);
     }
 
 }
