@@ -53,13 +53,13 @@ Now, when we look at our main objective of this project, we can see that the lin
 
 ![Bild](/bilder/geogebra-export%20(1).png "Linear Search vs. QuickSort + BinarySearch") *Linear Search (Blue) vs. QuickSort + BinarySearch (Green): Large array*
 
-![Bild](/bilder/LinearQuicksortBinary.png "Linear Search vs. QuickSort + BinarySearch") *Linear Search (Green) vs. QuickSort + BinarySearch (Orange): Intersection*
+![Bild](/bilder/LinearQuicksortBinary.png "Linear Search vs. QuickSort + BinarySearch") <br> *Linear Search (Green) vs. QuickSort + BinarySearch (Orange): Intersection*
 
 ![Bild](/bilder/LinearQuicksortBinary2.png "Linear Search vs. QuickSort + BinarySearch") *Linear Search (Green) vs. QuickSort + BinarySearch (Orange)*
 
 ![Bild](/bilder/LinearSearch.png "Linear Search Laufzeit") *Linear Search Runtime*
 
-![Bild](/bilder/Quicksort.png "Quicksort Laufzeit") *Quicksort Runtime*
+![Bild](/bilder/Quicksort.png "Quicksort Laufzeit") <br> *Quicksort Runtime*
 
 ![Bild](/bilder/BinarySearch.png "Binary Search Laufzeit") *Binary Search Runtime*
 
