@@ -7,6 +7,8 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
+import java.util.Arrays;
+
 public class JUnitTests {
 
     int [] arr = {12, 69, 98, 41, 88, 31, 54, 8, 69, 420};
@@ -34,17 +36,16 @@ public class JUnitTests {
     @Test
     public void OOQuickSortCheck ()
     {
-        int [] tArr = {8, 12, 31, 41, 54, 69, 69, 88, 98, 420};
         int[] larr = new int[arr.length];
 
-        for (int i = 0; i < larr.length; i++)
+        for (int i = 0; i < arr.length; i++)
         {
             larr[i] = arr[i];
         }
 
         ooquicky.quickSort(larr);
 
-        Assert.assertEquals(Arrays.equals(larr, tArr), true);
+        Assert.assertEquals(Arrays.equals(larr, arr1), true);
     }
 
     @Test
