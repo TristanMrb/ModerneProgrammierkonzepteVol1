@@ -25,7 +25,8 @@ public class JUnitTests {
     @Test
     public void OOLinearSearchIndexCheck ()
     {
-        Assert.assertEquals( oolinear.findInt(69, 69) , 1);
+        Assert.assertEquals( oolinear.findInt(arr, 69) , 1);
+        Assert.assertFalse( (oolinear.findInt(arr, 69)) == 0);
     }
 
     @Test
