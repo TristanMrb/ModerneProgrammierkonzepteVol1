@@ -14,7 +14,16 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class TestAll {
+/**
+ *     Class for running all tests
+ */
+
+class TestAll {
+    /**
+     * Method called by the UI
+     * @param mode select length of array
+     * @return list with all time information
+     */
     public static Long[] testall(int mode)
     {
         Long[] allResults = new Long[33];
