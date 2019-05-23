@@ -4,14 +4,17 @@ import functional.linearsearch.index.FunctionalLinearSearchIndexTest;
 import functional.linearsearch.list.FunctionalLinearSearchListTest;
 import multithreaded.linearsearch.index.MultithreadedLinearSearchIndexTest;
 import multithreaded.linearsearch.list.MultithreadedLinearSearchListTest;
+import oo.quicksort.OOQuicksortTest;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
+import java.util.Map;
 
 public class TestAll {
-    public static long[] testall(int mode)
+    public static Long[] testall(int mode)
     {
-        long[] allResults = new long[30];
+        Long[] allResults = new Long[30];
         int[] arr = {};
         int iterations = 100;
         int threads = 10;
@@ -58,6 +61,16 @@ public class TestAll {
         allResults[11] = (long)list.get(2);
         list = null;
 
-        return null;
+        long [] iterationresult = new long[iterations];
+        int [] copyArr = new int [arr.length];
+
+        for (int i = 0; i<iterations; i++) {
+            copyArr = Arrays.copyOf(arr, arr.length);
+            list = OOQuicksortTest.test(copyArr, 1);
+
+        }
+        list = null;
+
+        return allResults;
     }
 }
