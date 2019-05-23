@@ -55,7 +55,7 @@ Now, when we look at our main objective of this project, we can see that the Qui
 
 ![Bild](/bilder/LinearQuicksortBinary2.png "Linear Search vs. QuickSort + BinarySearch") *Linear Search vs. QuickSort + BinarySearch*
 
-![Bild](/bilder/Linear Search.png "Linear Search Laufzeit") *Linear Search Laufzeit*
+![Bild](/bilder/LinearSearch.png "Linear Search Laufzeit") *Linear Search Laufzeit*
 
 ![Bild](/bilder/Quciksort.png "Quicksort Laufzeit") *Quicksort Laufzeit*
 
