@@ -31,8 +31,8 @@ Project by Marcel Mertens, Anton Ochel, Tizian Groß, Tristan Emig & Benno Grimm
 
 ### Problems and fixes
 * In an earlier version, the first results were higher than the results after restarting the tests (while the application is still open)
-  * This was due to the cache memory and page tables that adjust over time to the running processes
-    * This was fixed by running through the test 6 times before showing the first test results -> this results in a longer loading time at first
+  * This was porbably due to the cache memory and page tables that adjust over time to the running processes
+    * This was fixed by running through the test 6 times before showing the first test results -> this resulted in a longer loading time at first
 * In an earlier version, the times did not match the calculated mathematic times
   * After seperating the algorithms and giving them their own test function, the problem was resolved
   
