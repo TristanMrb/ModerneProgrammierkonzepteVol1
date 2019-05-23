@@ -2,8 +2,8 @@
 Project by Marcel Mertens, Anton Ochel, Tizian Groß, Tristan Emig & Benno Grimm
 
 ## General Idea
-* Create a Program that sorts a given Array using Quicksort and then searches for a given Element using Binary Search. 
-* Compare that to a Program that searches the Array in a linear matter.
+* Create a program that sorts a given array using quicksort and then searches for a given element using binary search. 
+* Compare that to a program that searches the array in a linear matter.
 * Find out for which of those programs is more useful for different search operations.
 
 ## Concept
@@ -48,6 +48,16 @@ This can be explained. The object oriented functions have direct acceess to the 
 Now, when we look at our main objective of this project, we can see that the QuickSort + BinarySearch method is performing way better than all the other options. Especially binary search is incredibly fast, outperforming any other search algorithm by at least 2 times. This result, of course, is only representative to the specific parameters applied here. Changing the number of searched numbers and the size of the array will change the results drastically and may give a different algorithm the best performance.  
 
 ![Bild](/bilder/geogebra-export%20(1).png "Linear Search vs. QuickSort + BinarySearch") *Linear Search vs. QuickSort + BinarySearch*
+
+![Bild](/bilder/BinarySearch.png "Binary Search Laufzeit") *Binary Search Laufzeit*
+
+![Bild](/bilder/LinearQuicksortBinary.png "Linear Search vs. QuickSort + BinarySearch") *Linear Search vs. QuickSort + BinarySearch*
+
+![Bild](/bilder/LinearQuicksortBinary2.png "Linear Search vs. QuickSort + BinarySearch") *Linear Search vs. QuickSort + BinarySearch*
+
+![Bild](/bilder/LinearSearch.png "Linear Search Laufzeit") *Linear Search Laufzeit*
+
+![Bild](/bilder/Quicksort.png "Quicksort Laufzeit") *Quicksort Laufzeit*
 
 ----
 ©Multiflex Co.KG
