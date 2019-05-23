@@ -31,7 +31,7 @@ public class OOLinearSearchIndexTest {
             if(currentTimeEnd - currentTimeStart > maxTime) {
                 maxTime = currentTimeEnd - currentTimeStart;
             }
-            average += currentTimeEnd/1000 - currentTimeStart/1000;
+            average += ((currentTimeEnd - currentTimeStart) / 1000);
         }
 
         results.add(minTime/1000);
