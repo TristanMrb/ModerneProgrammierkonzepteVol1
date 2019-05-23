@@ -47,7 +47,7 @@ This can be explained. The object oriented functions have direct acceess to the 
 ### Linear Search vs. Quick Sort + Binary Search
 Now, when we look at our main objective of this project, we can see that the QuickSort + BinarySearch method is performing way better than all the other options. Especially binary search is incredibly fast, outperforming any other search algorithm by at least 2 times. This result, of course, is only representative to the specific parameters applied here. Changing the number of searched numbers and the size of the array will change the results drastically and may give a different algorithm the best performance.  
 
-![Alt-Text](geogebra-export(1).png)
+![Bild](geogebra-export(1).png)
 
 [Bild1]: geogebra-export(1).png "Mathematische Berechnung"
 ----
