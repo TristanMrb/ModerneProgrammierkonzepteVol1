@@ -67,4 +67,4 @@ Now, when we look at our main objective of this project, we can see that the lin
 Graphs were drawn with GeoGebra Online
 
 ----
-©Multiflexxer
+©Team Multiflex
