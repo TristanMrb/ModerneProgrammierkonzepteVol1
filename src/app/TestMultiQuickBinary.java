@@ -6,6 +6,10 @@ import oo.binarysearch.OOBinarySearch;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ *  Test for multithread Quicksort combined with object oriented Binarysearch
+ */
+
 public class TestMultiQuickBinary {
     public static List test(int[] arr, int searchObject, int iterations, int threads) {
         long minTime = Long.MAX_VALUE;

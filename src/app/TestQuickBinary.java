@@ -6,6 +6,10 @@ import oo.quicksort.OOQuickSort;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ *  Test for object oriented Quicksort combined with object oriented Binarysearch
+ */
+
 public class TestQuickBinary {
 
     public static List test(int [] arr, int searchObject, int iterations) {
