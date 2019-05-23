@@ -17,6 +17,11 @@ package tests;
         import java.util.Iterator;
         import java.util.List;
 
+
+/**
+ *  JUnit4 tests for all implemented algorithm
+ * */
+
 public class JUnitTests {
 
     int [] arr = {12, 69, 98, 41, 88, 31, 54, 8, 69, 420};
