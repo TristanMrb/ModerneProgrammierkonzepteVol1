@@ -19,7 +19,7 @@ public class MultithreadedIndexLinearSearch {
         int lScale = pSearchArray.length / pThreads;
         int lLastI = 0;
 
-        //splits the array up into the theats
+        //splits the array up into the threads
         for(int i = 0; i < (pThreads - 1); i++)
         {
             lLinearSearcherArray[i] = new LinearSearchThread(pSearchArray, pSearchElement, lLastI, (lLastI + lScale));
@@ -29,7 +29,7 @@ public class MultithreadedIndexLinearSearch {
             lLastI += lScale;
         }
 
-        lLinearSearcherArray[pThreads-1] = new LinearSearchThread(pSearchArray, pSearchElement, lLastI, pSearchArray.length);
+        lLinearSearcherArray[pThreads-1] = new LinearSearchThread(pSearchArray, pSearchElement, lLastI, pSearchArray.length-1);
 
         lThreadArray[pThreads-1] = new Thread(lLinearSearcherArray[pThreads-1]);
         lThreadArray[pThreads-1].start();
