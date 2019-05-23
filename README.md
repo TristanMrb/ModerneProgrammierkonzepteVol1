@@ -49,8 +49,6 @@ Now, when we look at our main objective of this project, we can see that the Qui
 
 ![Bild](/bilder/geogebra-export%20(1).png "Linear Search vs. QuickSort + BinarySearch") *Linear Search (Blau) vs. QuickSort + BinarySearch (Grün): Großes Array*
 
-![Bild](/bilder/BinarySearch.png "Binary Search Laufzeit") *Binary Search Laufzeit*
-
 ![Bild](/bilder/LinearQuicksortBinary.png "Linear Search vs. QuickSort + BinarySearch") *Linear Search (Grün) vs. QuickSort + BinarySearch (Orange): Schnittpunkt*
 
 ![Bild](/bilder/LinearQuicksortBinary2.png "Linear Search vs. QuickSort + BinarySearch") *Linear Search (Grün) vs. QuickSort + BinarySearch (Orange)*
@@ -58,6 +56,8 @@ Now, when we look at our main objective of this project, we can see that the Qui
 ![Bild](/bilder/LinearSearch.png "Linear Search Laufzeit") *Linear Search Laufzeit*
 
 ![Bild](/bilder/Quicksort.png "Quicksort Laufzeit") *Quicksort Laufzeit*
+
+![Bild](/bilder/BinarySearch.png "Binary Search Laufzeit") *Binary Search Laufzeit*
 
 ----
 ©Multiflex Co.KG
