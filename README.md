@@ -51,13 +51,13 @@ Now, when we look at our main objective of this project, we can see that the Qui
 
 ![Bild](/bilder/BinarySearch.png "Binary Search Laufzeit") *Binary Search Laufzeit*
 
-![Bild](/bilder/LinearQicksortBinary.png "Linear Search vs. QuickSort + BinarySearch") *Linear Search vs. QuickSort + BinarySearch*
+![Bild](/bilder/LinearQuicksortBinary.png "Linear Search vs. QuickSort + BinarySearch") *Linear Search vs. QuickSort + BinarySearch*
 
 ![Bild](/bilder/LinearQuicksortBinary2.png "Linear Search vs. QuickSort + BinarySearch") *Linear Search vs. QuickSort + BinarySearch*
 
 ![Bild](/bilder/LinearSearch.png "Linear Search Laufzeit") *Linear Search Laufzeit*
 
-![Bild](/bilder/Quciksort.png "Quicksort Laufzeit") *Quicksort Laufzeit*
+![Bild](/bilder/Quicksort.png "Quicksort Laufzeit") *Quicksort Laufzeit*
 
 ----
 ©Multiflex Co.KG
