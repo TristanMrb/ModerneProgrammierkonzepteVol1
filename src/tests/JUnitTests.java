@@ -10,6 +10,7 @@ import org.junit.Test;
 public class JUnitTests {
 
     int [] arr = {12, 69, 98, 41, 88, 31, 54, 8, 69, 420};
+    int [] arr = {8, 12, 31, 41, 54, 69, 69, 88, 98, 420};
     OOLinearSearchIndex oolinear;
     OOQuickSort ooquicky;
     OOBinarySearch oobinary;
@@ -39,5 +40,7 @@ public class JUnitTests {
     public void OOBinarySearchCheck ()
     {
 
+        Assert.assertEquals(oobinary.searchNumber(69), 6);
+        Assert.assertEquals(oobinary.searchNumber(89), -1);
     }
 }
