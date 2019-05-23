@@ -101,8 +101,8 @@ public class UI extends JFrame {
 
         // left center panel == Linear Search
         JLabel name = new JLabel("Name");
-        JLabel max = new JLabel("Max Time");
         JLabel min = new JLabel("Min Time");
+        JLabel max = new JLabel("Max Time");
         JLabel total = new JLabel("Average Time");
 
         JLabel FunctionalLinearSearchIndex = new JLabel("Functional LinearSearch Index: ");
@@ -139,8 +139,8 @@ public class UI extends JFrame {
         JLabel time53 = new JLabel(allTimes[17].toString());
 
         panel_search.add(name);
-        panel_search.add(max);
         panel_search.add(min);
+        panel_search.add(max);
         panel_search.add(total);
         panel_search.add(FunctionalLinearSearchIndex);
         panel_search.add(time01);
@@ -194,13 +194,13 @@ public class UI extends JFrame {
 
 
         JLabel name1 = new JLabel("Name");
-        JLabel max1 = new JLabel("Max Time");
         JLabel min1 = new JLabel("Min Time");
+        JLabel max1 = new JLabel("Max Time");
         JLabel total1 = new JLabel("Average Time");
 
         panel_sort.add(name1);
-        panel_sort.add(max1);
         panel_sort.add(min1);
+        panel_sort.add(max1);
         panel_sort.add(total1);
         panel_sort.add(OOQuicksort);
         panel_sort.add(time61);
@@ -347,8 +347,8 @@ public class UI extends JFrame {
 
         // left center panel == Linear Search
         JLabel name = new JLabel("Name");
-        JLabel max = new JLabel("Max Time");
         JLabel min = new JLabel("Min Time");
+        JLabel max = new JLabel("Max Time");
         JLabel total = new JLabel("Average Time");
 
         JLabel FunctionalLinearSearchIndex = new JLabel("Functional LinearSearch Index: ");
@@ -385,8 +385,8 @@ public class UI extends JFrame {
         JLabel time53 = new JLabel(allTimes[17].toString());
 
         panel_search.add(name);
-        panel_search.add(max);
         panel_search.add(min);
+        panel_search.add(max);
         panel_search.add(total);
         panel_search.add(FunctionalLinearSearchIndex);
         panel_search.add(time01);
@@ -438,13 +438,13 @@ public class UI extends JFrame {
 //        JLabel time93 = new JLabel(allTimes[29].toString());
 
         JLabel name1 = new JLabel("Name");
-        JLabel max1 = new JLabel("Max Time");
         JLabel min1 = new JLabel("Min Time");
+        JLabel max1 = new JLabel("Max Time");
         JLabel total1 = new JLabel("Average Time");
 
         panel_sort.add(name1);
-        panel_sort.add(max1);
         panel_sort.add(min1);
+        panel_sort.add(max1);
         panel_sort.add(total1);
         panel_sort.add(OOQuicksort);
         panel_sort.add(time61);

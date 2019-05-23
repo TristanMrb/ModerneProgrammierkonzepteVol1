@@ -22,7 +22,7 @@ public class TestAll {
     {
         Long[] allResults = new Long[30];
         int[] arr;
-        int iterations = 100;
+        int iterations = 0;
         int threads = 10;
         List list = new ArrayList();
 
@@ -31,15 +31,25 @@ public class TestAll {
         //used for different array sizes
         switch (mode)
         {
-            case 1: arr = new int[10];
+            case 1:
+                arr = new int[10];
+                iterations = 100;
                 break;
-            case 2: arr = new int[100];
+            case 2:
+                arr = new int[100];
+                iterations = 100;
                 break;
-            case 3: arr = new int[1000];
+            case 3:
+                arr = new int[1000];
+                iterations = 10;
                 break;
-            case 4: arr = new int[10000];
+            case 4:
+                arr = new int[10000];
+                iterations = 1;
                 break;
-            default: arr = new int[10];
+            default:
+                arr = new int[10];
+                iterations = 100;
         }
 
         //generates our test array
@@ -92,22 +102,18 @@ public class TestAll {
         long [] iterationresult = new long[iterations];
 
         //OO Quicksort
-        for (int i = 0; i<iterations; i++) {
-            list = OOQuicksortTest.test(arr, 1);
-            iterationresult[i] = (long)list.get(0);
-        }
-        List lHelpList = resultBuilder(iterationresult);
-        allResults[18] = (long)lHelpList.get(0);
-        allResults[19] = (long)lHelpList.get(1);
-        allResults[20] = (long)lHelpList.get(2);
+        list = OOQuicksortTest.test(arr, iterations);
+        allResults[18] = (long)list.get(0);
+        allResults[19] = (long)list.get(1);
+        allResults[20] = (long)list.get(2);
         list.clear();
-        lHelpList.clear();
 
         //Multithreaded Quicksort
         for (int i = 0; i<iterations; i++) {
             list = MultithreadedQuicksortTest.test(arr, 1, threads);
             iterationresult[i] = (long)list.get(0);
         }
+        List lHelpList = resultBuilder(iterationresult);
         lHelpList = resultBuilder(iterationresult);
         allResults[21] = (long)lHelpList.get(0);
         allResults[22] = (long)lHelpList.get(1);
