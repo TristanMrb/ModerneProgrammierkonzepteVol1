@@ -124,11 +124,11 @@ public class TestAll {
 
         // OO Quicksort + OO BinarySearch
         // MUSS NOCh ÜERDACHT WERDEN
-        allResults[27] = (long)lHelpList.get(0);
+/*        allResults[27] = (long)lHelpList.get(0);
         allResults[28] = (long)lHelpList.get(1);
         allResults[29] = (long)lHelpList.get(2);
         list.clear();
-        lHelpList.clear();
+        lHelpList.clear();*/
 
         return allResults;
     }
