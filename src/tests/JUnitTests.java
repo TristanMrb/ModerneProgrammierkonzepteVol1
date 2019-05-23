@@ -1,6 +1,5 @@
 package tests;
 
-import multithreaded.linearsearch.index.MultithreadedIndexLinearSearch;
 import oo.binarysearch.OOBinarySearch;
 import oo.linearsearch.index.OOLinearSearchIndex;
 import oo.linearsearch.list.OOLinearSearchList;
@@ -22,7 +21,6 @@ public class JUnitTests {
     int [] arr2 = {12, 8, 31, 41, 54, 69, 69, 88, 98, 420};
     OOLinearSearchIndex oolinearindex;
     OOLinearSearchList oolinearlist;
-    MultithreadedIndexLinearSearch multithreadedLinearSearch;
     OOQuickSort ooquicky;
     OOBinarySearch oobinary;
 
@@ -33,7 +31,6 @@ public class JUnitTests {
         oolinearlist = new OOLinearSearchList();
         ooquicky = new OOQuickSort();
         oobinary = new OOBinarySearch(arr1);
-        multithreadedLinearSearch = new MultithreadedIndexLinearSearch();
     }
 
     @Test
@@ -84,15 +81,4 @@ public class JUnitTests {
         Assert.assertEquals(oobinary.searchNumber(89), -1);
     }
 
-    @Test
-    public void MultithreadedLinearSearchIndexCheckTrue()
-    {
-        Assert.assertEquals(1, multithreadedLinearSearch.search(arr, 69, 1));
-    }
-
-    @Test
-    public void MultithreadedLinearSearchIndexCheckFalse()
-    {
-        Assert.assertEquals(-1, multithreadedLinearSearch.search(arr, 100, 1) );
-    }
 }
