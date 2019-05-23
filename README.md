@@ -11,8 +11,10 @@ Project by Marcel Mertens, Anton Ochel, Tizian Groß, Tristan Emig & Benno Grimm
 * 4 search algorithms and 2 sort & search algorithms can be compared
   * each of the algorithms returns a minimum time, a maximum time and an average time
 * every algorithm is tested
-  * the test consist of a 10000 element array where one random specific number has to be found
-    * it is repeated 100 times to get the test results
+  * there are 4 options to test the algorithms
+    * with either 10, 100, 1000 or 10000 elements in the array
+      	* every time, the algorithm is tested 
+   
     
 ## Structure
 * Every category has its own package
