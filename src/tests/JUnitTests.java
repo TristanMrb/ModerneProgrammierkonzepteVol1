@@ -3,7 +3,6 @@ package tests;
         import functional.linearsearch.index.FunctionalLinearSearchIndex;
         import functional.linearsearch.list.FunctionalLinearSearchList;
         import multithreaded.linearsearch.index.MultithreadedIndexLinearSearch;
-        import multithreaded.linearsearch.list.LinearSearcherThread;
         import multithreaded.linearsearch.list.MultithreadedListLinearSearch;
         import multithreaded.quicksort.QuicksortMultithreaded;
         import oo.binarysearch.OOBinarySearch;
@@ -67,6 +66,18 @@ public class JUnitTests {
     }
 
     @Test
+    public void MultithreadeLinearSearchIndexCheckTrue ()
+    {
+        Assert.assertEquals(1, multilinearindex.search(arr, 69, 1));
+    }
+
+    @Test
+    public void MultithreadeLinearSearchIndexCheckFalse ()
+    {
+        Assert.assertEquals(-1, multilinearindex.search(arr, 100, 1));
+    }
+
+    @Test
     public void MultithreadedLinearSearchListCheck ()
     {
         boolean expectedResult = false;
@@ -122,12 +133,6 @@ public class JUnitTests {
     }
 
     @Test
-    public void OOBinarySearchCheck ()
-    {
-        Assert.assertEquals(oobinary.searchNumber(69), 5);
-        Assert.assertEquals(oobinary.searchNumber(89), -1);
-    }
-    @Test
     public void QuicksortMultithreadedCheck ()
     {
         int[] larr = new int[arr.length];
@@ -141,17 +146,11 @@ public class JUnitTests {
         Assert.assertEquals(Arrays.equals(larr, arr1), true);
         Assert.assertEquals(Arrays.equals(larr, arr2), false);
     }
-        
-    @Test
-    public void MultithreadeLinearSearchIndexCheckTrue ()
-    {
-        Assert.assertEquals(1, multilinearindex.search(arr, 69, 1));
-    }
 
     @Test
-    public void MultithreadeLinearSearchIndexCheckFalse ()
+    public void OOBinarySearchCheck ()
     {
-        Assert.assertEquals(-1, multilinearindex.search(arr, 100, 1));
+        Assert.assertEquals(oobinary.searchNumber(69), 5);
+        Assert.assertEquals(oobinary.searchNumber(89), -1);
     }
-
 }
