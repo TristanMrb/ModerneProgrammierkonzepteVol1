@@ -33,7 +33,17 @@ public class JUnitTests {
     @Test
     public void OOQuickSortCheck ()
     {
+        int [] tArr = {8, 12, 31, 41, 54, 69, 69, 88, 98, 420};
+        int[] larr = new int[arr.length];
 
+        for (int i = 0; i < larr.length; i++)
+        {
+            larr[i] = arr[i];
+        }
+
+        ooquicky.quickSort(larr);
+
+        Assert.assertEquals(Arrays.equals(larr, tArr), true);
     }
 
     @Test
