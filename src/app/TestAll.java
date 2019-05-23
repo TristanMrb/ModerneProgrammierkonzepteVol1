@@ -4,12 +4,14 @@ import functional.linearsearch.index.FunctionalLinearSearchIndexTest;
 import functional.linearsearch.list.FunctionalLinearSearchListTest;
 import multithreaded.linearsearch.index.MultithreadedLinearSearchIndexTest;
 import multithreaded.linearsearch.list.MultithreadedLinearSearchListTest;
+import oo.linearsearch.index.OOLinearSearchIndex;
+import oo.linearsearch.index.OOLinearSearchIndexTest;
+import oo.linearsearch.list.OOLinearSearchListTest;
 import oo.quicksort.OOQuicksortTest;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-import java.util.Map;
 
 public class TestAll {
     public static Long[] testall(int mode)
@@ -59,6 +61,18 @@ public class TestAll {
         allResults[9] = (long)list.get(0);
         allResults[10] = (long)list.get(1);
         allResults[11] = (long)list.get(2);
+        list = null;
+
+        list = OOLinearSearchIndexTest.test(arr, searchObject, iterations);
+        allResults[12] = (long)list.get(0);
+        allResults[13] = (long)list.get(1);
+        allResults[14] = (long)list.get(2);
+        list = null;
+
+        list = OOLinearSearchListTest.test(arr, searchObject, iterations);
+        allResults[15] = (long)list.get(0);
+        allResults[16] = (long)list.get(1);
+        allResults[17] = (long)list.get(2);
         list = null;
 
         long [] iterationresult = new long[iterations];
