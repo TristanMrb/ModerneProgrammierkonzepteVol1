@@ -13,6 +13,7 @@ public class JUnitTests {
 
     int [] arr = {12, 69, 98, 41, 88, 31, 54, 8, 69, 420};
     int [] arr1 = {8, 12, 31, 41, 54, 69, 69, 88, 98, 420};
+    int [] arr2 = {12, 8, 31, 41, 54, 69, 69, 88, 98, 420};
     OOLinearSearchIndex oolinear;
     OOQuickSort ooquicky;
     OOBinarySearch oobinary;
@@ -30,7 +31,6 @@ public class JUnitTests {
     {
         Assert.assertEquals( oolinear.findInt(arr, 69) , 1);
         Assert.assertEquals( oolinear.findInt(arr, 6) , -1);
-        Assert.assertFalse( (oolinear.findInt(arr, 69)) == 0);
     }
 
     @Test
@@ -46,6 +46,7 @@ public class JUnitTests {
         ooquicky.quickSort(larr);
 
         Assert.assertEquals(Arrays.equals(larr, arr1), true);
+        Assert.assertEquals(Arrays.equals(larr, arr2), false);
     }
 
     @Test
