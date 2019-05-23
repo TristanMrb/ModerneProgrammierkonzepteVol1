@@ -19,7 +19,7 @@ public class TestAll {
     public static Long[] testall(int mode)
     {
         Long[] allResults = new Long[30];
-        int[] arr = {};
+        int[] arr;
         int iterations = 100;
         int threads = 10;
         List list = new ArrayList();
@@ -28,15 +28,20 @@ public class TestAll {
 
         switch (mode)
         {
-            case 1:
+            case 1: arr = new int[10];
                 break;
-            case 2:
+            case 2: arr = new int[100];
                 break;
-            case 3:
+            case 3: arr = new int[1000];
                 break;
-            case 4:
+            case 4: arr = new int[10000];
                 break;
-            default:
+            default: arr = new int[10];
+        }
+
+        //generates our test array
+        for (int i = 0; i < arr.length; i++) {
+            arr[i] = (int) Math.floor(Math.random() * arr.length-1);
         }
 
 
@@ -119,7 +124,7 @@ public class TestAll {
         allResults[26] = (long)lHelpList.get(2);
         list.clear();
         lHelpList.clear();
-        
+
         // OO Quicksort + OO BinarySearch
         /*for (int i = 0; i<iterations; i++) {
             copyArr = Arrays.copyOf(arr, arr.length);
