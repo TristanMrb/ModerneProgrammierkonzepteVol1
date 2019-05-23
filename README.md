@@ -4,7 +4,7 @@ Project by Marcel Mertens, Anton Ochel, Tizian Groß, Tristan Emig & Benno Grimm
 ## General Idea
 * Create a program that sorts a given array using quicksort and then searches for a given element using binary search. 
 * Compare that to a program that searches the array in a linear matter.
-* Find out for which of those programs is more useful for different search operations.
+* Find out which of those programs is more useful for different search operations.
 
 ## Concept
 * A UI displays all the test results of the different algorithms
