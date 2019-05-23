@@ -41,7 +41,7 @@ public class TestAll {
 
         //generates our test array
         for (int i = 0; i < arr.length; i++) {
-            arr[i] = (int) Math.floor(Math.random() * arr.length-1);
+            arr[i] = (int) Math.floor(Math.random() * 100);
         }
 
 
