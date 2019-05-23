@@ -1,5 +1,7 @@
 package tests;
 
+import functional.linearsearch.index.FunctionalLinearSearchIndex;
+import functional.linearsearch.list.FunctionalLinearSearchList;
 import oo.binarysearch.OOBinarySearch;
 import oo.linearsearch.index.OOLinearSearchIndex;
 import oo.linearsearch.list.OOLinearSearchList;
@@ -31,6 +33,30 @@ public class JUnitTests {
         oolinearlist = new OOLinearSearchList();
         ooquicky = new OOQuickSort();
         oobinary = new OOBinarySearch(arr1);
+    }
+
+    @Test
+    public void FunctionalLinearSearchIndexCheck ()
+    {
+        Assert.assertEquals( FunctionalLinearSearchIndex.findIndex(arr, 69) , 1);
+        Assert.assertEquals( FunctionalLinearSearchIndex.findIndex(arr, 6) , -1);
+    }
+
+    @Test
+    public void FunctionalLinearSearchListCheck ()
+    {
+        boolean expectedResult = false;
+        List<Integer> list = FunctionalLinearSearchList.searchint(arr, 69);
+        Iterator i = list.iterator();
+        while( i.hasNext() ) {
+            if ( (int) i.next() == 1) {
+                expectedResult = true;
+            }
+            if ( (int) i.next() == 8 ) {
+                expectedResult = true;
+            }
+        }
+        Assert.assertEquals( expectedResult , true);
     }
 
     @Test
