@@ -1,0 +1,11 @@
+app
+functional.linearsearch.index
+functional.linearsearch.list
+multithreaded.linearsearch.index
+multithreaded.linearsearch.list
+multithreaded.quicksort
+oo.binarysearch
+oo.linearsearch.index
+oo.linearsearch.list
+oo.quicksort
+tests
