@@ -55,16 +55,15 @@ public class JUnitTests {
     {
         boolean expectedResult = false;
         List<Integer> list = FunctionalLinearSearchList.searchint(arr, 69);
+        int expectedResults [] = { 1, 8 };
+        int actualResults [] = new int [2];
+        int counter = 0;
         Iterator i = list.iterator();
         while( i.hasNext() ) {
-            if ( (int) i.next() == 1) {
-                expectedResult = true;
-            }
-            if ( (int) i.next() == 8 ) {
-                expectedResult = true;
-            }
+            actualResults[counter] = (int) i.next();
+            counter++;
         }
-        Assert.assertEquals( expectedResult , true);
+        Assert.assertEquals( Arrays.equals(expectedResults, actualResults), true);
     }
 
     @Test
@@ -72,16 +71,15 @@ public class JUnitTests {
     {
         boolean expectedResult = false;
         List<Integer> list = multilinearlist.search(arr, 69,10);
+        int expectedResults [] = { 1, 8 };
+        int actualResults [] = new int [2];
+        int counter = 0;
         Iterator i = list.iterator();
         while( i.hasNext() ) {
-            if ( (int) i.next() == 0) {
-                expectedResult = true;
-            }
-            if ( (int) i.next() == 8 ) {
-                expectedResult = true;
-            }
+            actualResults[counter] = (int) i.next();
+            counter++;
         }
-        Assert.assertEquals( expectedResult , false);
+        Assert.assertEquals( Arrays.equals(expectedResults, actualResults), true);
     }
 
     @Test
@@ -96,17 +94,15 @@ public class JUnitTests {
     {
         boolean expectedResult = false;
         List<Integer> list = oolinearlist.findInt(arr, 69);
+        int expectedResults [] = { 1, 8 };
+        int actualResults [] = new int [2];
+        int counter = 0;
         Iterator i = list.iterator();
         while( i.hasNext() ) {
-
-            if ( (int) i.next() == 1) {
-                expectedResult = true;
-            }
-            if ( (int) i.next() == 8 ) {
-                expectedResult = true;
-            }
+            actualResults[counter] = (int) i.next();
+            counter++;
         }
-        Assert.assertEquals( expectedResult , true);
+        Assert.assertEquals( Arrays.equals(expectedResults, actualResults), true);
     }
 
     @Test
