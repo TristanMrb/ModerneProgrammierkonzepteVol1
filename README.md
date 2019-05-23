@@ -17,7 +17,7 @@ Project by Marcel Mertens, Anton Ochel, Tizian Groß, Tristan Emig & Benno Grimm
 ## Structure
 * Every category has its own package
 * Every algorithm is its own class
-* The UI starts every class with a test function that is implementet by using an abstract class
+* Every Algorithm has its own test function that delivers the results back to the UI
 * The results are then displayed
 
 ## Developement
@@ -31,6 +31,8 @@ Project by Marcel Mertens, Anton Ochel, Tizian Groß, Tristan Emig & Benno Grimm
 * In an earlier version, the first results were higher than the results after restarting the tests (while the application is still open)
   * This was due to the cache memory and page tables that adjust over time to the running processes
     * This was fixed by running through the test 6 times before showing the first test results -> this results in a longer loading time at first
+* In an earlier version, the times did not match the calculated mathematic times
+  * After seperating the algorithms and giving them their own test function, the problem was resolved
   
 ## Explaining the results
 
@@ -46,4 +48,4 @@ This can be explained. The object oriented functions have direct acceess to the 
 Now, when we look at our main objective of this project, we can see that the QuickSort + BinarySearch method is performing way better than all the other options. Especially binary search is incredibly fast, outperforming any other search algorithm by at least 2 times. This result, of course, is only representative to the specific parameters applied here. Changing the number of searched numbers and the size of the array will change the results drastically and may give a different algorithm the best performance.  
 
 ----
-©Multiflex KG
+©Multiflex Co.KG
