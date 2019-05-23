@@ -3,7 +3,7 @@ package oo.linearsearch.index;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Test {
+public class OOLinearSearchIndexTest {
 
     public static List test(int[] arr, int searchObject, int iterations) {
 
