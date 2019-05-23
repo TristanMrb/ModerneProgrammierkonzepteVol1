@@ -9,7 +9,7 @@ import org.junit.Test;
 
 public class JUnitTests {
 
-    int [] arr;
+    int [] arr = {12, 69, 98, 41, 88, 31, 54, 8, 69, 420};
     OOLinearSearchIndex oolinear;
     OOQuickSort ooquicky;
     OOBinarySearch oobinary;
@@ -17,8 +17,6 @@ public class JUnitTests {
 
     @Before
     public void setup() {
-        arr = {12, 69, 98, 41, 88, 31, 54, 8, 69, 420};
-
         oolinear = new OOLinearSearchIndex();
         ooquicky = new OOQuickSort();
         oobinary = new OOBinarySearch(arr);
