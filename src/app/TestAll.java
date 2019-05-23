@@ -42,7 +42,7 @@ public class TestAll {
                 break;
             case 4:
                 arr = new int[10000];
-                iterations = 5;
+                iterations = 2;
                 break;
             default:
                 arr = new int[10];
@@ -96,8 +96,6 @@ public class TestAll {
         allResults[17] = (long)list.get(2);
         list.clear();
 
-        long [] iterationresult = new long[iterations];
-
         //OO Quicksort
         list = OOQuicksortTest.test(arr, iterations);
         allResults[18] = (long)list.get(0);
@@ -106,20 +104,19 @@ public class TestAll {
         list.clear();
 
         //Multithreaded Quicksort
-        for (int i = 0; i<iterations; i++) {
-            list = MultithreadedQuicksortTest.test(arr, 1, threads);
-            iterationresult[i] = (long)list.get(0);
-        }
-        List lHelpList = resultBuilder(iterationresult);
-        lHelpList = resultBuilder(iterationresult);
-        allResults[21] = (long)lHelpList.get(0);
-        allResults[22] = (long)lHelpList.get(1);
-        allResults[23] = (long)lHelpList.get(2);
+        list = MultithreadedQuicksortTest.test(arr, iterations, threads);
+        allResults[21] = (long)list.get(0);
+        allResults[22] = (long)list.get(1);
+        allResults[23] = (long)list.get(2);
         list.clear();
-        lHelpList.clear();
 
         //OO BinarySearch
-        list = OOBinarySearchTest.test(arr, searchObject, iterations);
+        int [] larr = new int[arr.length];
+        for (int j = 0; j < arr.length - 1; j++) {
+            larr[j] = arr[j];
+        }
+        OOQuicksortTest.test(larr, 1);
+        list = OOBinarySearchTest.test(larr, searchObject, iterations);
         allResults[24] = (long)list.get(0);
         allResults[25] = (long)list.get(1);
         allResults[26] = (long)list.get(2);
@@ -138,25 +135,6 @@ public class TestAll {
         allResults[31] = (long)list.get(1);
         allResults[32] = (long)list.get(2);
         list.clear();
-
         return allResults;
-    }
-
-    public static List resultBuilder (long[] iterationresults) {
-
-        List returnValues = new ArrayList();
-
-        Arrays.sort(iterationresults);
-
-        long total_time = 0;
-        for (int i = 0; i < iterationresults.length; i++) {
-            total_time += (iterationresults[i]/1000);
-        }
-
-        returnValues.add(iterationresults[0]/1000);
-        returnValues.add(iterationresults[iterationresults.length-1]/1000);
-        returnValues.add(total_time/iterationresults.length);
-
-        return returnValues;
     }
 }

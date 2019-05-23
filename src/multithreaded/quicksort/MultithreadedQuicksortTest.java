@@ -3,10 +3,8 @@ package multithreaded.quicksort;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MultithreadedQuicksortTest
-{
+public class MultithreadedQuicksortTest {
     public static List test(int[] arr, int iterations, int threads) {
-
         long minTime = Long.MAX_VALUE;
         long maxTime = Long.MIN_VALUE;
         long average = 0;
@@ -14,7 +12,6 @@ public class MultithreadedQuicksortTest
         List results = new ArrayList();
 
         QuicksortMultithreaded l = new QuicksortMultithreaded();
-
 
         for (int i = 0; i < iterations; i++) {
             int [] larr = new int [arr.length];
