@@ -64,4 +64,4 @@ Now, when we look at our main objective of this project, we can see that the lin
 ![Bild](/bilder/BinarySearch.png "Binary Search Laufzeit") *Binary Search Runtime*
 
 ----
-©Multiflex Co.KG
+©Multiflex Co.KG (<-Das ist ein Spaß)
