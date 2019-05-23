@@ -64,4 +64,7 @@ Now, when we look at our main objective of this project, we can see that the lin
 ![Bild](/bilder/BinarySearch.png "Binary Search Laufzeit") *Binary Search Runtime*
 
 ----
+Graphs were drawn with GeoGebra Online
+
+----
 ©Multiflex Co.KG (<-Das ist ein Spaß)
