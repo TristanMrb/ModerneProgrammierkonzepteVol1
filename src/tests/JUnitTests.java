@@ -37,6 +37,7 @@ public class JUnitTests {
     @Test
     public void OOBinarySearchCheck ()
     {
-
+        Assert.assertEquals(oobinary.searchNumber(69), 69);
+        Assert.assertEquals(oobinary.searchNumber(89), -1);
     }
 }
