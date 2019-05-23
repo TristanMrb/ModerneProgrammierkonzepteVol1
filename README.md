@@ -22,6 +22,9 @@ Project by Marcel Mertens, Anton Ochel, Tizian Groß, Tristan Emig & Benno Grimm
 * Every Algorithm has its own test function that delivers the results back to the UI
 * The results are then displayed
 
+## JavaDoc
+<a href="https://mertens-web.ddns.net/JavaDocs" target="_blank">JavaDoc (externer Link)</a>
+
 ## Developement
 
 ### What we found out
