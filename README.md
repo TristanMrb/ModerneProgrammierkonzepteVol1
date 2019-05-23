@@ -13,7 +13,7 @@ Project by Marcel Mertens, Anton Ochel, Tizian Groß, Tristan Emig & Benno Grimm
 * every algorithm is tested
   * there are 4 options to test the algorithms
     * with either 10, 100, 1000 or 10000 elements in the array
-      	* every time, the algorithm is tested 
+      	* every time, the algorithm is tested 100 (for 10 & 100), 10 (for 1000) or 5 (for 10000) times, depending on the array size
    
     
 ## Structure
