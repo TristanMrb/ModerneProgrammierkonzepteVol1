@@ -4,10 +4,6 @@ import javax.swing.*;
 import javax.swing.border.Border;
 import java.awt.*;
 import java.awt.event.ActionListener;
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.Map;
-import java.util.Set;
 
 /**
  * UI class generates User Interface for executing and showing test results
@@ -28,39 +24,58 @@ public class UI extends JFrame {
      * Click Cancel or X to close the Window and end the Task
      */
 
-    public UI () {
+    public UI() {
         super("Search and Sort");
-        //for ( int i = 0; i<6; i++)
-            //TestAlgorithms.runTest();
 
         this.setLayout(new BorderLayout());
 
         // Top JFrame
         JPanel panel_top = new JPanel(new FlowLayout(FlowLayout.CENTER));
 
-        JButton btn_run = new JButton("Run");
-        btn_run.setToolTipText("Run Tests on all Algorithms");
+        JButton btn_10 = new JButton("Run with 10");
+        btn_10.setToolTipText("10 numbers in the array.");
+        JButton btn_100 = new JButton("Run with 100");
+        btn_100.setToolTipText("100 numbers in the array.");
+        JButton btn_1000 = new JButton("Run with 1000");
+        btn_1000.setToolTipText("1000 numbers in the array.");
+        JButton btn_10000 = new JButton("Run with 10000");
+        btn_1000.setToolTipText("10000 numbers in the array.");
         JButton btn_cancel = new JButton("Cancel");
         btn_cancel.setToolTipText("Cancel Program and close the window");
 
-        panel_top.add(btn_run);
+        panel_top.add(btn_10);
+        panel_top.add(btn_100);
+        panel_top.add(btn_1000);
+        panel_top.add(btn_10000);
         panel_top.add(btn_cancel);
 
         ActionListener buttonListener = e -> {
-            if (e.getActionCommand().equals("Run")) {
-                //new UI(TestAlgorithms.runTest(), UI.super.getX(), UI.super.getY());
+            if (e.getActionCommand().equals("Run with 10")) {
+                new UI(TestAll.testall(1), UI.super.getX(), UI.super.getY());
+                UI.super.dispose();
+            } else if (e.getActionCommand().equals("Run with 100")) {
+                new UI(TestAll.testall(2), UI.super.getX(), UI.super.getY());
+                UI.super.dispose();
+            } else if (e.getActionCommand().equals("Run with 1000")) {
+                new UI(TestAll.testall(3), UI.super.getX(), UI.super.getY());
+                UI.super.dispose();
+            } else if (e.getActionCommand().equals("Run with 10000")) {
+                new UI(TestAll.testall(4), UI.super.getX(), UI.super.getY());
                 UI.super.dispose();
             } else if (e.getActionCommand().equals("Cancel")) {
                 System.exit(0);
             }
         };
 
-        btn_run.addActionListener(buttonListener);
+        btn_10.addActionListener(buttonListener);
+        btn_100.addActionListener(buttonListener);
+        btn_1000.addActionListener(buttonListener);
+        btn_10000.addActionListener(buttonListener);
         btn_cancel.addActionListener(buttonListener);
 
-        Integer allTimes [] = new Integer[30];
+        Integer allTimes[] = new Integer[30];
 
-        for (int i = 0; i<allTimes.length; i++ ) {
+        for (int i = 0; i < allTimes.length; i++) {
             allTimes[i] = -1;
         }
 
@@ -68,7 +83,7 @@ public class UI extends JFrame {
         // center JFrame
 
         // center Panels
-        JPanel panel_center = new JPanel(new FlowLayout(FlowLayout.CENTER));
+        JPanel panel_center = new JPanel(new GridLayout(0, 1));
 
         JPanel panel_center_search = new JPanel(new FlowLayout(FlowLayout.CENTER));
         panel_center_search.setBorder(border_search);
@@ -255,13 +270,13 @@ public class UI extends JFrame {
         this.pack();
 
         Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
-        this.setLocation(dim.width/2-this.getSize().width/2, dim.height/2-this.getSize().height/2);
+        this.setLocation(dim.width / 2 - this.getSize().width / 2, dim.height / 2 - this.getSize().height / 2);
 
         this.setVisible(true);
     }
 
 
-    public UI (ArrayList<Map<String, Long>> list, int x, int y) {
+    public UI(Long[] allTimes, int x, int y) {
         super("Search and Sort");
 
 
@@ -270,52 +285,50 @@ public class UI extends JFrame {
         // Top JFrame
         JPanel panel_top = new JPanel(new FlowLayout(FlowLayout.CENTER));
 
-        JButton btn_run = new JButton("Restart");
-        btn_run.setToolTipText("Restart all Tests");
+        JButton btn_10 = new JButton("Run with 10");
+        btn_10.setToolTipText("10 numbers in the array.");
+        JButton btn_100 = new JButton("Run with 100");
+        btn_100.setToolTipText("100 numbers in the array.");
+        JButton btn_1000 = new JButton("Run with 1000");
+        btn_1000.setToolTipText("1000 numbers in the array.");
+        JButton btn_10000 = new JButton("Run with 10000");
+        btn_1000.setToolTipText("10000 numbers in the array.");
         JButton btn_cancel = new JButton("Cancel");
         btn_cancel.setToolTipText("Cancel Program and close the window");
 
-        panel_top.add(btn_run);
+        panel_top.add(btn_10);
+        panel_top.add(btn_100);
+        panel_top.add(btn_1000);
+        panel_top.add(btn_10000);
         panel_top.add(btn_cancel);
 
         ActionListener buttonListener = e -> {
-            if (e.getActionCommand().equals("Restart")) {
-                //new UI(TestAlgorithms.runTest(), UI.super.getX(), UI.super.getY());
+            if (e.getActionCommand().equals("Run with 10")) {
+                new UI(TestAll.testall(1), UI.super.getX(), UI.super.getY());
                 UI.super.dispose();
-            } else if (e.getActionCommand().equals("Cancel"))
+            } else if (e.getActionCommand().equals("Run with 100")) {
+                new UI(TestAll.testall(2), UI.super.getX(), UI.super.getY());
+                UI.super.dispose();
+            } else if (e.getActionCommand().equals("Run with 1000")) {
+                new UI(TestAll.testall(3), UI.super.getX(), UI.super.getY());
+                UI.super.dispose();
+            } else if (e.getActionCommand().equals("Run with 10000")) {
+                new UI(TestAll.testall(4), UI.super.getX(), UI.super.getY());
+                UI.super.dispose();
+            } else if (e.getActionCommand().equals("Cancel")) {
                 System.exit(0);
+            }
         };
 
-        btn_run.addActionListener(buttonListener);
+        btn_10.addActionListener(buttonListener);
+        btn_100.addActionListener(buttonListener);
+        btn_1000.addActionListener(buttonListener);
+        btn_10000.addActionListener(buttonListener);
         btn_cancel.addActionListener(buttonListener);
 
-        Long [] allTimes = new Long[30];
-        int i = 0;
-
-        if (list != null) {
-            Iterator<Map<String, Long>> arr = list.iterator();
-
-            while (arr.hasNext()) {
-                Map<String, Long> map = (Map<String, Long>) arr.next();
-                Set<String> schluessel = map.keySet();
-
-                Iterator<String> mapIterator = schluessel.iterator();
-
-                while (mapIterator.hasNext()) {
-                    String str = (String) mapIterator.next();
-                    Long l = (map.get(str));
-
-                    allTimes[i] = l;
-
-                    i++;
-                }
-            }
-        }
-
         // center JFrame
-
         // center panels
-        JPanel panel_center = new JPanel(new FlowLayout(FlowLayout.CENTER));
+        JPanel panel_center = new JPanel(new GridLayout(0, 1));
 
         JPanel panel_center_search = new JPanel(new FlowLayout(FlowLayout.CENTER));
         panel_center_search.setBorder(border_search);
@@ -420,9 +433,9 @@ public class UI extends JFrame {
         JLabel time82 = new JLabel(allTimes[25].toString());
         JLabel time83 = new JLabel(allTimes[26].toString());
         // Object Oriented QuickSort + BinarySearch
-        JLabel time91 = new JLabel(allTimes[27].toString());
-        JLabel time92 = new JLabel(allTimes[28].toString());
-        JLabel time93 = new JLabel(allTimes[29].toString());
+//        JLabel time91 = new JLabel(allTimes[27].toString());
+//        JLabel time92 = new JLabel(allTimes[28].toString());
+//        JLabel time93 = new JLabel(allTimes[29].toString());
 
         JLabel name1 = new JLabel("Name");
         JLabel max1 = new JLabel("Max Time");
@@ -446,9 +459,9 @@ public class UI extends JFrame {
         panel_sort.add(time82);
         panel_sort.add(time83);
         panel_sort.add(Quicksort_Binarysearch);
-        panel_sort.add(time91);
-        panel_sort.add(time92);
-        panel_sort.add(time93);
+//        panel_sort.add(time91);
+//        panel_sort.add(time92);
+//        panel_sort.add(time93);
 
         // Time label style
         name.setHorizontalAlignment(JLabel.CENTER);
@@ -489,9 +502,9 @@ public class UI extends JFrame {
         time81.setHorizontalAlignment(JLabel.RIGHT);
         time82.setHorizontalAlignment(JLabel.RIGHT);
         time83.setHorizontalAlignment(JLabel.RIGHT);
-        time91.setHorizontalAlignment(JLabel.RIGHT);
-        time92.setHorizontalAlignment(JLabel.RIGHT);
-        time93.setHorizontalAlignment(JLabel.RIGHT);
+//        time91.setHorizontalAlignment(JLabel.RIGHT);
+//        time92.setHorizontalAlignment(JLabel.RIGHT);
+//        time93.setHorizontalAlignment(JLabel.RIGHT);
 
         // Configuration Frame
         this.add(panel_top, BorderLayout.NORTH);
