@@ -10,7 +10,7 @@ import org.junit.Test;
 public class JUnitTests {
 
     int [] arr = {12, 69, 98, 41, 88, 31, 54, 8, 69, 420};
-    int [] arr = {8, 12, 31, 41, 54, 69, 69, 88, 98, 420};
+    int [] arr1 = {8, 12, 31, 41, 54, 69, 69, 88, 98, 420};
     OOLinearSearchIndex oolinear;
     OOQuickSort ooquicky;
     OOBinarySearch oobinary;
@@ -20,13 +20,14 @@ public class JUnitTests {
     public void setup() {
         oolinear = new OOLinearSearchIndex();
         ooquicky = new OOQuickSort();
-        oobinary = new OOBinarySearch(arr);
+        oobinary = new OOBinarySearch(arr1);
     }
 
     @Test
     public void OOLinearSearchIndexCheck ()
     {
         Assert.assertEquals( oolinear.findInt(arr, 69) , 1);
+        Assert.assertEquals( oolinear.findInt(arr, 6) , -1);
         Assert.assertFalse( (oolinear.findInt(arr, 69)) == 0);
     }
 
@@ -39,8 +40,7 @@ public class JUnitTests {
     @Test
     public void OOBinarySearchCheck ()
     {
-
-        Assert.assertEquals(oobinary.searchNumber(69), 6);
+        Assert.assertEquals(oobinary.searchNumber(69), 5);
         Assert.assertEquals(oobinary.searchNumber(89), -1);
     }
 }
