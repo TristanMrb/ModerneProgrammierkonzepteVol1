@@ -2,6 +2,7 @@ package tests;
 
         import functional.linearsearch.index.FunctionalLinearSearchIndex;
         import functional.linearsearch.list.FunctionalLinearSearchList;
+        import multithreaded.linearsearch.index.MultithreadedIndexLinearSearch;
         import multithreaded.linearsearch.list.LinearSearcherThread;
         import multithreaded.linearsearch.list.MultithreadedListLinearSearch;
         import multithreaded.quicksort.QuicksortMultithreaded;
@@ -33,7 +34,7 @@ public class JUnitTests {
 
     @Before
     public void setup() {
-        multilinearlist = new MultithreadedListIndexSearch();
+        multilinearlist = new MultithreadedListLinearSearch();
         multilinearindex = new MultithreadedIndexLinearSearch();
         oolinearindex = new OOLinearSearchIndex();
         oolinearlist = new OOLinearSearchList();
