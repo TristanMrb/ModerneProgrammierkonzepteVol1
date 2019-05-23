@@ -49,6 +49,5 @@ Now, when we look at our main objective of this project, we can see that the Qui
 
 ![Bild](geogebra-export%20(1).png)
 
-[Bild1]: geogebra-export%20(1).png "Mathematische Berechnung"
 ----
 ©Multiflex Co.KG
