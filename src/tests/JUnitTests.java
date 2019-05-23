@@ -2,6 +2,7 @@ package tests;
 
         import functional.linearsearch.index.FunctionalLinearSearchIndex;
         import functional.linearsearch.list.FunctionalLinearSearchList;
+        import multithreaded.linearsearch.index.MultithreadedIndexLinearSearch;
         import multithreaded.linearsearch.list.LinearSearcherThread;
         import multithreaded.linearsearch.list.MultithreadedListLinearSearch;
         import oo.binarysearch.OOBinarySearch;
@@ -21,7 +22,8 @@ public class JUnitTests {
     int [] arr = {12, 69, 98, 41, 88, 31, 54, 8, 69, 420};
     int [] arr1 = {8, 12, 31, 41, 54, 69, 69, 88, 98, 420};
     int [] arr2 = {12, 8, 31, 41, 54, 69, 69, 88, 98, 420};
-    MultithreadedListLinearSearch multilinearindex;
+    MultithreadedListLinearSearch multilinearlist;
+    MultithreadedIndexLinearSearch multilinearindex;
     OOLinearSearchIndex oolinearindex;
     OOLinearSearchList oolinearlist;
     OOQuickSort ooquicky;
@@ -30,11 +32,12 @@ public class JUnitTests {
 
     @Before
     public void setup() {
-        multilinearindex = new MultithreadedListLinearSearch();
+        multilinearlist = new MultithreadedListLinearSearch();
         oolinearindex = new OOLinearSearchIndex();
         oolinearlist = new OOLinearSearchList();
         ooquicky = new OOQuickSort();
         oobinary = new OOBinarySearch(arr1);
+        multilinearindex = new MultithreadedIndexLinearSearch();
     }
 
     @Test
@@ -65,7 +68,7 @@ public class JUnitTests {
     public void MultithreadedLinearSearchListCheck ()
     {
         boolean expectedResult = false;
-        List<Integer> list = multilinearindex.search(arr, 69,10);
+        List<Integer> list = multilinearlist.search(arr, 69,10);
         Iterator i = list.iterator();
         while( i.hasNext() ) {
             if ( (int) i.next() == 0) {
@@ -126,4 +129,15 @@ public class JUnitTests {
         Assert.assertEquals(oobinary.searchNumber(89), -1);
     }
 
+    @Test
+    public void MultithreadeLinearSearchIndexCheckTrue ()
+    {
+        Assert.assertEquals(1, multilinearindex.search(arr, 69, 1));
+    }
+
+    @Test
+    public void MultithreadeLinearSearchIndexCheckFalse ()
+    {
+        Assert.assertEquals(-1, multilinearindex.search(arr, 100, 1));
+    }
 }
