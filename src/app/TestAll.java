@@ -10,6 +10,8 @@ import oo.linearsearch.index.OOLinearSearchIndex;
 import oo.linearsearch.index.OOLinearSearchIndexTest;
 import oo.linearsearch.list.OOLinearSearchListTest;
 import oo.quicksort.OOQuicksortTest;
+import oo.binarysearch.OOBinarySearch;
+import oo.quicksort.OOQuickSort;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -26,6 +28,7 @@ public class TestAll {
 
         int searchObject = ((int) Math.floor(Math.random() * 100));
 
+        //used for different array sizes
         switch (mode)
         {
             case 1: arr = new int[10];
@@ -43,7 +46,6 @@ public class TestAll {
         for (int i = 0; i < arr.length; i++) {
             arr[i] = (int) Math.floor(Math.random() * 100);
         }
-
 
         //Functional LinearSearchIndex
         list = FunctionalLinearSearchIndexTest.test(arr, searchObject, iterations);
@@ -88,12 +90,10 @@ public class TestAll {
         list.clear();
 
         long [] iterationresult = new long[iterations];
-        int [] copyArr = new int [arr.length];
 
         //OO Quicksort
         for (int i = 0; i<iterations; i++) {
-            copyArr = Arrays.copyOf(arr, arr.length);
-            list = OOQuicksortTest.test(copyArr, 1);
+            list = OOQuicksortTest.test(arr, 1);
             iterationresult[i] = (long)list.get(0);
         }
         List lHelpList = resultBuilder(iterationresult);
@@ -105,8 +105,7 @@ public class TestAll {
 
         //Multithreaded Quicksort
         for (int i = 0; i<iterations; i++) {
-            copyArr = Arrays.copyOf(arr, arr.length);
-            list = MultithreadedQuicksortTest.test(copyArr, 1, threads);
+            list = MultithreadedQuicksortTest.test(arr, 1, threads);
             iterationresult[i] = (long)list.get(0);
         }
         lHelpList = resultBuilder(iterationresult);
@@ -117,26 +116,19 @@ public class TestAll {
         lHelpList.clear();
 
         //OO BinarySearch
-        copyArr = Arrays.copyOf(arr, arr.length);
-        list = OOBinarySearchTest.test(copyArr, searchObject, iterations);
-        allResults[24] = (long)lHelpList.get(0);
-        allResults[25] = (long)lHelpList.get(1);
-        allResults[26] = (long)lHelpList.get(2);
+        list = OOBinarySearchTest.test(arr, searchObject, iterations);
+        allResults[24] = (long)list.get(0);
+        allResults[25] = (long)list.get(1);
+        allResults[26] = (long)list.get(2);
         list.clear();
-        lHelpList.clear();
 
         // OO Quicksort + OO BinarySearch
-        /*for (int i = 0; i<iterations; i++) {
-            copyArr = Arrays.copyOf(arr, arr.length);
-            list = MultithreadedQuicksortTest.test(copyArr, 1, threads);
-            iterationresult[i] = (long)list.get(0);
-        }
-        lHelpList = resultBuilder(iterationresult);
+        // MUSS NOCh ÜERDACHT WERDEN
         allResults[27] = (long)lHelpList.get(0);
         allResults[28] = (long)lHelpList.get(1);
         allResults[29] = (long)lHelpList.get(2);
         list.clear();
-        lHelpList.clear();*/
+        lHelpList.clear();
 
         return allResults;
     }
