@@ -27,20 +27,20 @@ Project by Marcel Mertens, Anton Ochel, Tizian Groß, Tristan Emig & Benno Grimm
 ### What we found out
 * Not every search algorithm can be implemented in a functional way
   * For some, it does not even make sense -> recursive algorithms
-* Multithreaded programming produces a lot of unecessary overhead
+* Multithreaded programming produces a lot of unnecessary overhead
 
 ### Problems and fixes
 * In an earlier version, the first results were higher than the results after restarting the tests (while the application is still open)
-  * This was porbably due to the cache memory and page tables that adjust over time to the running processes
+  * This was prbably due to the cache memory and page tables that adjust over time to the running processes
     * This was fixed by running through the test 6 times before showing the first test results -> this resulted in a longer loading time at first
 * In the same version, the times did not match the calculated mathematic times
-  * After seperating the algorithms and giving them their own test function, the problem was resolved
+  * After separating the algorithms and giving them their own test function, the problem was resolved
   
 ## Explaining the results
 
 ### Searching by Index vs. Searching by List
 When comparing all the algorithms by their output logic, it is easy to see that in almost all cases, the index search is faster; up to 2 times.
-This makes sense when you look at the structure of the algorithm. When you only search for the index, the search process is stopped after the first matched result is found. With the list, every matched result is being extracted from the array, subsequently, the whole array is being run through. This also explains their min and max times being closer together in some cases. Also, the list functions have to manage a seperate list, which slows them down even more.
+This makes sense when you look at the structure of the algorithm. When you only search for the index, the search process is stopped after the first matched result is found. With the list, every matched result is being extracted from the array, subsequently, the whole array is being run through. This also explains their min and max times being closer together in some cases. Also, the list functions have to manage a separate list, which slows them down even more.
 
 ### Functional vs. Multithreaded vs. Object Oriented
 When comparing all the algorithms by their internal logic, the results are unanimous: object oriented is the fastest, functional takes the second place and multithreaded is the lowest by a big margin.
